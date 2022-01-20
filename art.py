@@ -13,33 +13,26 @@ SCRIPT_VERSION = "0"
 SCRIPT_LICENSE = "WTFPL"
 SCRIPT_DESC = ("send ansi files loll")
 
-import sys
 
-PY3 = sys.version > '3'
-
-reload(sys)  # Reload is a hack
-sys.setdefaultencoding('UTF8')
-
-if PY3:
-    unichr = chr
-    def send(buf, text):
-        weechat.command(buf, "/input send {}".format(text))
-else:
-    def send(buf, text):
-        weechat.command(buf, "/input send {}".format(text.encode("utf-8")))
+#if PY3:
+unichr = chr
+def send(buf, text):
+    weechat.command(buf, "/input send {}".format(text))
+#else:
+#    def send(buf, text):
+#        weechat.command(buf, "/input send {}".format(text.encode("utf-8")))
 
 w=weechat
-path='art' #change to wherever your art dir is lol
+ARTPATH="/home/oz/art" #change to wherever your art dir is lol
 files = [
-            f for f in os.listdir(path)
+            f for f in os.listdir(ARTPATH)
             if os.path.isfile(
-                "".join([path, f]
-                )
+                "/".join([ARTPATH, f])
             )
         ]
 
 def cb_art_cmd(data, buf, argv ):
-    global path
+    global ARTPATH
     global files
     file = ''
     args = argv.split(' ')
@@ -52,14 +45,14 @@ def cb_art_cmd(data, buf, argv ):
     #file=''
     if not args[0]: # randum!
         fname = random.choice(files)
-        file = "".join([path,fname])
+        file = "/".join([ARTPATH,fname])
     else:
         if args[0] == 'list': #list files...
             w.prnt(buf, " ".join(files))
             return w.WEECHAT_RC_OK
         else:
             fname = " ".join(args[1:])
-            file = "".join([path,fname])
+            file = "/".join([ARTPATH,fname])
             test=os.path.isfile(file)
             if not test:
                 w.prnt(buf,"lol wtf {0} ain't no FILE!!!!".format(file))
