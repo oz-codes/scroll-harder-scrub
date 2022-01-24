@@ -23,7 +23,7 @@ def send(buf, text):
 #        weechat.command(buf, "/input send {}".format(text.encode("utf-8")))
 
 w=weechat
-ARTPATH="/home/oz/art" #change to wherever your art dir is lol
+ARTPATH="/home/oz/git/scroll-harder-scrub/art" #change to wherever your art dir is lol
 files = [
             f for f in os.listdir(ARTPATH)
             if os.path.isfile(
@@ -82,6 +82,7 @@ def a2w(m):
 
 def art_files(data, completion_item, buffer, completion):
     global files
+    w.prnt(buffer, pprint.pformat(files))
     for f in files:
         weechat.hook_completion_list_add(completion, f, 0, weechat.WEECHAT_LIST_POS_SORT)
     return w.WEECHAT_RC_OK
