@@ -82,7 +82,6 @@ def a2w(m):
 
 def art_files(data, completion_item, buffer, completion):
     global files
-    w.prnt(buffer, pprint.pformat(files))
     for f in files:
         weechat.hook_completion_list_add(completion, f, 0, weechat.WEECHAT_LIST_POS_SORT)
     return w.WEECHAT_RC_OK
