@@ -1,29 +1,15 @@
-15,01 
 
-15,01|11|17+-----------------------------+|16
-15,01|11|17| E - Emulation Mode          ||16        |11|17+-------------------------
-15,01------+|16
-15,01|11|17| G - Hi-Bit Graphics Chars   ||16        |11|17| L.S.D. BBS Configuration
-15,01 Menu ||16
-15,01|11|17| F - Full Screen Editor      ||16        |11|17+-------------------------
-15,01------+|16
-15,01|11|17| L - Line Feeds              ||16
-15,01|11|17| M - More Prompts            ||07-|11|17------------------+|16
-15,01|11|17| N - Configure Newscan       ||07Y|11|17 - Your Status    ||07-|11|17----
-15,01--------------------+|16
-15,01|11|17| O - Message Post Prompts    ||07I|11|17 - Input Color    ||07C|11|17 - M
-15,01enu Background Color||16
-15,01|11|17| Q - Quit Configuration      ||07P|11|17 - Prompt Color   ||07J|11|17 - B
-15,01ox Border Color     ||16
-15,01|11|17| T - Time Display            ||07R|11|17 - Regular Color  ||07K|11|17 - B
-15,01ox Text Color       ||16
-15,01|11|17| U - Upper Case Filter       ||07S|11|17 - Status Color   ||07A|11|17 - P
-15,01ull Down Menus      ||16
-15,01|11|17| W - Screen Width Selection  ||07Z|11|17 - Macros         ||07H|11|17 - M
-15,01enu Highlight Color ||16
-15,01|11|17+-----------------------------+|07D|11|17 - Display Length ||07*|11|17 - C
-15,01aps Filter          ||16
-15,01                             |07| B|11|17 - Menu Border    ||07!|11|17 - Avatar 
-15,01Support       ||16
-15,01                             |11|17+--------------------+|07-|11|17-------------
-15,01-----------+|16
+15,01                           11V10i11S10i11ON-X 10U11ser 10C11onfiguration
+
+11,01   15T14erminal 15D14ependencies15           U14ser 15C14olors15             M14iscellaneous
+
+15,01     00(13A00) 13A06vatar 13T06oggle15        00(13B00) 13B06order 13C06olor15         00(13M00) 13M06ore 13P06rompts
+15,01     00(13D00) 13D06isplay 13L06ength15       00(13C00) 13B06ackground 13C06olor15     00(13N00) 13C06onfig 13N06ewscan
+15,01     00(13E00) 13A06nsi 13E06mulation15       00(13H00) 13H06ighlight 13C06olor15      00(13O00) 13P06ost 13p06rompts
+15,01     00(13F00) 13F06ull 13S06creen 13E06ditor   00(13I00) 13I06nput 13C06olor15          00(13Q00) 13Q06uit 13t06o 13M06ain
+15,01     00(13G00) 13I06BM 13G06raphics15         00(13J00) 13W06indow 13B06order15        00(13T00) 13D06isplay 13T06ime 13L06eft
+15,01     00(13L00) 13L06inefeeds15            00(13K00) 13W06indow 13I06nside15        00(13Y00) 13Y06our 13C06onfiguration
+15,01     00(13U00) 13U06pper/13L06ower 13C06ase15     00(13P00) 13P06rompt 13C06olor15         00(13Z00) 13E06dit/13C06reate 13M06acros
+15,01                              00(13R00) 13R06egular 13C06olor15        00(13=00) 13P06rompt 13T06ype
+15,01                              00(13S00) 13S06tatus 13C06olor
+15,01                              00(13V00) 13S06tatus 13B06ox 13C06olor

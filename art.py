@@ -24,13 +24,12 @@ def send(buf, text):
 
 w=weechat
 ARTPATH="/home/oz/git/scroll-harder-scrub/art" #change to wherever your art dir is lol
-files = [
+files = sorted([
             f for f in os.listdir(ARTPATH)
             if os.path.isfile(
                 "/".join([ARTPATH, f])
             )
-        ]
-
+        ])
 def cb_art_cmd(data, buf, argv ):
     global ARTPATH
     global files
@@ -83,6 +82,7 @@ def a2w(m):
 def art_files(data, completion_item, buffer, completion):
     global files
     for f in files:
+        w.prnt(buffer, "doing thing with %s" % f);
         weechat.hook_completion_list_add(completion, f, 0, weechat.WEECHAT_LIST_POS_SORT)
     return w.WEECHAT_RC_OK
 
